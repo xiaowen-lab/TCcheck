@@ -103,10 +103,11 @@ if submitted:
         st.markdown("<div style='height: 6px;'></div>", unsafe_allow_html=True)
 
         st.markdown("**📊 SHAP Waterfall Plot**", unsafe_allow_html=True)
-        # 设置图形尺寸（宽度, 高度），单位为英寸
+       
+        
         import matplotlib.pyplot as plt
-        plt.rcParams['font.family'] = 'DejaVu Serif'  # 或 "Microsoft YaHei" 等
-        plt.rcParams['font.size'] = 4        # 设置字号
+        plt.rcParams['font.family'] = 'DejaVu Serif' 
+        plt.rcParams['font.size'] = 4        
         plt.figure(figsize=(12, 10))
         st_shap(shap.plots.waterfall(shap_values[0, :, 1], max_display=len(features)), height=720)
         #plt.tight_layout()
